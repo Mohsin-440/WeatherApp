@@ -1,3 +1,12 @@
+// Add your API key from the following App
+// ********************************************************************************************************
+
+const API_KEY = `03710a788f15ce2cd7157c0937739f91`;
+
+// ********************************************************************************************************
+
+
+
 const searchBtn = document.querySelector('#submitBtn');
 const input = document.querySelector('#cityNameInput');
 const cityName = document.querySelector('#cityName');
@@ -37,7 +46,7 @@ const getInfo = async (event)=>{
         dataHide.classList.add('data_Hide');
     }else{
         try {
-            let url= `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=03710a788f15ce2cd7157c0937739f91`;
+            let url= `https://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=${API_KEY}`;
             const response = await fetch(url);
             const data = await response.json();
             const arrData = [data];
